@@ -5,8 +5,8 @@ php_modules: [ 'php-curl', 'php-gd', 'php-mbstring', 'php-xml', 'php-xmlrpc', 'p
 #MySQL Settings
 mysql_root_password: "mysql_root_password"
 mysql_db: "wordpress"
-mysql_user: "rsanchezg"
-mysql_password: "password"
+mysql_user: "smantilla"
+mysql_password: "Senplades2o18"
 
 #HTTP Settings
 http_host: "your_domain"
@@ -16,5 +16,5 @@ http_port: "80"
 #POSTGRESQL Settings
 postgresql_db: "wordpress"
 postgresql_user: "wordpress"
-postgresql_password: "Admin4321"
+postgresql_password: "@dmin.123"
 postgres_host: ""

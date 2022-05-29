@@ -1,5 +1,5 @@
 data "aws_route53_zone" "wordpress" {
-  name         = "rsgconsole.net."
+  name         = "haomconsole.net."
   private_zone = false
 }
 
