@@ -1,0 +1,8 @@
+{
+    "editor.wordWrap": "off",
+    "workbench.commandPalette.preserveInput": true,
+    "workbench.editor.autoLockGroups": {
+        "interactive": true,
+        "workbench.editorinputs.searchEditorInput": true
+    }
+}
