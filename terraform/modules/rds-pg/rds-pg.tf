@@ -7,7 +7,7 @@ resource "aws_db_instance" "wordpress-db" {
   instance_class             = "db.t2.micro"
   name                       = "wordpress"
   username                   = "wordpress"
-  password                   = "Admin4321"
+  password                   = "@dmin.123"
   db_subnet_group_name       = aws_db_subnet_group.wordpress.id
   vpc_security_group_ids     = [var.wordpress_rdb_sg_id]
   backup_window              = "01:00-01:30"
