@@ -16,5 +16,5 @@ http_port: "80"
 #POSTGRESQL Settings
 postgresql_db: "wordpress"
 postgresql_user: "wordpress"
-postgresql_password: "@dmin.123"
+postgresql_password: "Admin.123"
 postgres_host: ""
