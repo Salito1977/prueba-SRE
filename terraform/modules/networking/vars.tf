@@ -19,9 +19,9 @@ variable "subnet_cidr_data2" {
 }
 
 variable "availability_zone1" {
-  default = "us-east-1a"
+  default = "us-east-2a"
 }
 
 variable "availability_zone2" {
-  default = "us-east-1b"
+  default = "us-east-2b"
 }

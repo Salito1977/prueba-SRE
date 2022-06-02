@@ -14,11 +14,13 @@ provider "aws" {
   region  = "us-east-2"
 }
 
-resource "aws_instance" "app_server" {
-  ami           = "ami-830c94e3"
-  instance_type = "t2.micro"
+module "networking" {
+  source = "./modules/networking"  
+}
 
-  tags = {
-    Name = "ExampleAppServerInstance"
-  }
+module "rds-potgres" {
+  source = "./modules/rds-pg"
+  subnets = [module.networking.subnet_data1_id, module.networking.subnet_data2_id]
+  vpc_id = module.networking.vpc_id
+  wordpress_rdb_sg_id = module.networking.wordpress_rdb_sg_i
 }
