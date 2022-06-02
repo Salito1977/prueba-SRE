@@ -15,7 +15,7 @@ resource "aws_lb_target_group_attachment" "wordpress" {
 data "aws_elb_service_account" "main" {}
 
 resource "aws_s3_bucket" "alb_access_logs" {
-  bucket = "wordpress-alb-access-logs"
+  bucket = "wordpress-alb-access-logs-bucket"
   acl    = "private"  
   policy = <<POLICY
 {
@@ -27,7 +27,7 @@ resource "aws_s3_bucket" "alb_access_logs" {
         "s3:PutObject"
       ],
       "Effect": "Allow",
-      "Resource": "arn:aws:s3:::wordpress-alb-access-logs/AWSLogs/*",
+      "Resource": "arn:aws:s3:::wordpress-alb-access-logs-bucket/AWSLogs/*",
       "Principal": {
         "AWS": [
           "${data.aws_elb_service_account.main.arn}"

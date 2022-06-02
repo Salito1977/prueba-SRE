@@ -3,11 +3,11 @@ resource "aws_db_instance" "wordpress-db" {
   allocated_storage          = 20
   storage_type               = "gp2"
   engine                     = "postgres"
-  engine_version             = "9.6.9"
-  instance_class             = "db.t2.micro"
+  engine_version             = "13.4"
+  instance_class             = "db.t3.micro"
   name                       = "wordpress"
   username                   = "wordpress"
-  password                   = "@dmin.123"
+  password                   = "Admin.123"
   db_subnet_group_name       = aws_db_subnet_group.wordpress.id
   vpc_security_group_ids     = [var.wordpress_rdb_sg_id]
   backup_window              = "01:00-01:30"
