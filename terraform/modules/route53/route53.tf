@@ -5,7 +5,7 @@ data "aws_route53_zone" "wordpress" {
 
 resource "aws_route53_record" "wordpress" {
   zone_id = data.aws_route53_zone.wordpress.zone_id
-  name    = data.aws_route53_zone.wordpress.name
+  name    = "sretest.${data.aws_route53_zone.wordpress.name}"
   type    = "A"
 
   alias {
