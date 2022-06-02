@@ -30,3 +30,12 @@ module "ec2" {
   subnets = [module.networking.subnet1_id, module.networking.subnet2_id]
   wordpress_sg_id = module.networking.wordpress_sg_id
 }
+
+module "alb" {
+  source = "./modules/alb"
+  vpc_id = module.networking.vpc_id
+  subnets = [module.networking.subnet1_id, module.networking.subnet2_id]
+  instance_target_ids = module.ec2.instance_target_ids
+  wordpress_sg_id = module.networking.wordpress_sg_id  
+}
+
